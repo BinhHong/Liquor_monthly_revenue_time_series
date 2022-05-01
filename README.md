@@ -3,6 +3,9 @@
 # Monthly revenue time series of a liquor company
 
 ## Introduction
+In this project, I consider a time series of monthly revenue of Jim Beam Brands, a liquor company in Iowa State, USA. First of all, I explore the important characterizations of this time series, such as decompositions (both multiplicative and additive), stationary property, seasonal plot ... In the next step, I make some forecasts based on two models: SARIMA and Prophet. Trend changes detection, cross validation and more importantly, the hyperparameters tuning are also included.
+
+The dataset used in this project is a part deduced from a large dataset given by Iowa State.
 
 
 
