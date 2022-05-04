@@ -5,7 +5,16 @@
 ## Introduction
 In this project, I consider a time series of monthly revenue of Jim Beam Brands, a liquor company in Iowa State, USA. First of all, I explore the important characterizations of this time series, such as decompositions (both multiplicative and additive), stationary property, seasonal plot ... In the next step, I make some forecasts based on two models: SARIMA and Prophet. Trend changes detection, cross validation and more importantly, the hyperparameters tuning are also included.
 
-The dataset used in this project is a part deduced from a large dataset given by Iowa State.
+## Dataset
+The dataset used in this project is a part deduced from a huge dataset given by [Iowa’s state-hosted open data portal](https://data.iowa.gov/Sales-Distribution/Iowa-Liquor-Sales/m3tr-qhgy), which has around 24 million rows and 24 columns.
+
+For the purpose of this project, I filtered the vendor named `Jim Beam Brands`, resulting in `2180745` rows. The following columns are considered:
+- `Date`: date that bottles were sold to retailers.
+- `Item Description`: names of the sold bottles.
+- `Bottle Volume`: volume of each bottle.
+- `State Bottle Cost`: cost the Iowa State pays to Jim Beam Brands for sold bottles.
+- `State Bottle Retail`: money the State receives from selling bottles to retailers.
+- `Bottle Sold`: number of bottles sold to retailers.
 
 
 
