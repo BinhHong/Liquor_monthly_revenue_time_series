@@ -24,8 +24,6 @@ For the purpose of this project, I filtered the vendor named `Jim Beam Brands`, 
 
 A first glimpse of seasonality as well as the distribution of revenue are also explored.
 
-
-
 - For better understanding, I check the stationary property, seasonality and make decompositions in both multiplicative and additive cases.
 - Finally, the forecasts are carried out based on two models: `SARIMA` and `Prophet`. 
 
@@ -37,27 +35,27 @@ With Prophet model, a cross-validation is implemented, and later used in hyperpa
 
 ### 1. The seasonality can be somewhat suggested by seasonal plot
 
-![](Pictures/seasonal_plot.png?raw=true)
+<img src="https://user-images.githubusercontent.com/95805829/166657110-0670a864-f47c-44c0-9b02-1b67be735047.png" width=50% height=50%>
 and the box plots:
-![](Pictures/box_plot.png?raw=true)
+<img src="https://user-images.githubusercontent.com/95805829/166657110-0670a864-f47c-44c0-9b02-1b67be735047.png" width=50% height=50%>
 
 ### 2. Decomposition
 
-![](Pictures/decomposition.png?raw=true)
+<img src="https://user-images.githubusercontent.com/95805829/166657110-0670a864-f47c-44c0-9b02-1b67be735047.png" width=50% height=50%>
 
 ### 3. Forecasts with SARIMA model
 
-![](Pictures/SARIMA_1.png?raw=true)
+<img src="https://user-images.githubusercontent.com/95805829/166657110-0670a864-f47c-44c0-9b02-1b67be735047.png" width=50% height=50%>
 
 On another training set containing info of outliers, the result is better
 
-![](Pictures/SARIMA_2.png?raw=true)
+<img src="https://user-images.githubusercontent.com/95805829/166657110-0670a864-f47c-44c0-9b02-1b67be735047.png" width=50% height=50%>
 
 ### 4. Forecasts with Prophet model
 
-![](Pictures/Prophet_1.png?raw=true)
+<img src="https://user-images.githubusercontent.com/95805829/166657110-0670a864-f47c-44c0-9b02-1b67be735047.png" width=50% height=50%>
 
 After hyperparameters tuning, we get an improvement
 
-![](Pictures/Prophet_2.png?raw=true)
+<img src="https://user-images.githubusercontent.com/95805829/166657110-0670a864-f47c-44c0-9b02-1b67be735047.png" width=50% height=50%>
 
