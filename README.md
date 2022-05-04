@@ -45,13 +45,21 @@ and the box plots:
 
 ### 3. Forecasts with SARIMA model
 
-On a training set containing 80% of our dataset:
+Forecast on a training set containing 80% of our dataset:
 
 <img src="https://user-images.githubusercontent.com/95805829/166658092-4d0ee429-1d58-43b4-ba0a-fd8b864e8f85.png" width=80% height=40%>
+
+The errors in this case are:
+
+<img src="https://user-images.githubusercontent.com/95805829/166663030-8a014723-d455-401b-be9e-e86f40301686.png" width=20% height=10%>
 
 On another training set containing info of outliers, the result is better
 
 <img src="https://user-images.githubusercontent.com/95805829/166658106-d80421b1-a887-444b-806a-3de339179b81.png" width=80% height=40%>
+
+with better errors
+
+<img src="https://user-images.githubusercontent.com/95805829/166663040-bef27914-65bd-4cbb-8536-5b95a640fd9b.png" width=20% height=10%>
 
 ### 4. Forecasts with Prophet model
 
