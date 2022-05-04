@@ -6,7 +6,7 @@
 In this project, I consider a time series of monthly revenue of Jim Beam Brands, a liquor company in Iowa State, USA. First of all, I explore the important characterizations of this time series, such as decompositions (both multiplicative and additive), stationary property, seasonal plot ... In the next step, I make some forecasts based on two models: SARIMA and Prophet. Trend changes detection, cross validation and more importantly, the hyperparameters tuning are also included.
 
 ## Dataset
-The dataset used in this project is a part deduced from a huge dataset given by [Iowa’s state-hosted open data portal](https://data.iowa.gov/Sales-Distribution/Iowa-Liquor-Sales/m3tr-qhgy), which has around 24 million rows and 24 columns.
+The dataset used in this project is a part deduced from a huge dataset at [Iowa’s state-hosted open data portal](https://data.iowa.gov/Sales-Distribution/Iowa-Liquor-Sales/m3tr-qhgy), which has around 24 million rows and 24 columns.
 
 For the purpose of this project, I filtered the vendor named `Jim Beam Brands`, resulting in `2180745` rows. The following columns are considered:
 - `Date`: date that bottles were sold to retailers.
@@ -18,10 +18,25 @@ For the purpose of this project, I filtered the vendor named `Jim Beam Brands`, 
 
 ## Methodologies
 
-1. In Exploratory Data Analysis, I created a time series of monthly revenue of `Jim Beam Brands`, made some visualizations:
+- After cleansing the data, I created a time series of monthly revenue of `Jim Beam Brands` and made some visualizations:
 
-![](plot1.png?raw=true)
+![](Pictures/monthly_revenue_plot.png?raw=true)
+
+A first glimpse of seasonality as well as the distribution of revenue are also explored.
 
 
 
+- For better understanding, I check the stationary property, seasonality and make decompositions in both multiplicative and additive cases.
+- Finally, the forecasts are carried out based on two models: `SARIMA` and `Prophet`. 
 
+In SARIMA, I use `auto_arima` to search for best possible parameters `p`, `q`, `d` and test the result on a training set. Due to fact that this dataset has unexpected trend changes and outliers, two training sets are used to validate the accuracy.
+
+With Prophet model, a cross-validation is implemented, and later used in hyperparameters tuning, including `changepoint_prior_scale` and `seasonality_prior_scale`. These parameters are then put into the forecast to effectively the `RMSE` error.
+
+## Results
+
+![](Pictures/seasonal_plot.png?raw=true)
+
+I also explore the distribution with the box plots:
+
+![](Pictures/box_plot.png?raw=true)
