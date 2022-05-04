@@ -16,7 +16,11 @@ For the purpose of this project, I filtered the vendor named `Jim Beam Brands`, 
 - `State Bottle Retail`: money the State receives from selling bottles to retailers.
 - `Bottle Sold`: number of bottles sold to retailers.
 
+## Methodologies
 
+1. In Exploratory Data Analysis, I created a time series of monthly revenue of `Jim Beam Brands`, made some visualizations:
+
+![](plot1.png?raw=true)
 
 
 
