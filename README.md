@@ -20,7 +20,7 @@ For the purpose of this project, I filtered the vendor named `Jim Beam Brands`, 
 
 - After cleansing the data, I created a time series of monthly revenue of `Jim Beam Brands` and made some visualizations:
 
-![](Pictures/monthly_revenue_plot.png?raw=true)
+<img src="https://user-images.githubusercontent.com/95805829/166657971-30ac3b91-f191-4e35-82c4-27d71a1aadf8.png" width=80% height=60%>
 
 A first glimpse of seasonality as well as the distribution of revenue are also explored.
 
@@ -35,27 +35,32 @@ With Prophet model, a cross-validation is implemented, and later used in hyperpa
 
 ### 1. The seasonality can be somewhat suggested by seasonal plot
 
-<img src="https://user-images.githubusercontent.com/95805829/166657110-0670a864-f47c-44c0-9b02-1b67be735047.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/95805829/166658125-c8d4b0b3-0552-46c3-ab80-24e3f47c1fed.png" width=80% height=60%>
 and the box plots:
-<img src="https://user-images.githubusercontent.com/95805829/166657110-0670a864-f47c-44c0-9b02-1b67be735047.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/95805829/166658018-83209525-df3c-4b67-a2ff-0216a1922ccc.png" width=80% height=60%>
 
-### 2. Decomposition
+### 2. Decomposition is done by `seasonal_decompose` from `statsmodels.tsa.seasonal`
 
-<img src="https://user-images.githubusercontent.com/95805829/166657110-0670a864-f47c-44c0-9b02-1b67be735047.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/95805829/166658044-cfc6f541-12e6-43f5-a973-4d1b44e0d460.png" width=80% height=80%>
 
 ### 3. Forecasts with SARIMA model
 
-<img src="https://user-images.githubusercontent.com/95805829/166657110-0670a864-f47c-44c0-9b02-1b67be735047.png" width=50% height=50%>
+On a training set containing 80% of our dataset:
+
+<img src="https://user-images.githubusercontent.com/95805829/166658092-4d0ee429-1d58-43b4-ba0a-fd8b864e8f85.png" width=80% height=40%>
 
 On another training set containing info of outliers, the result is better
 
-<img src="https://user-images.githubusercontent.com/95805829/166657110-0670a864-f47c-44c0-9b02-1b67be735047.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/95805829/166658106-d80421b1-a887-444b-806a-3de339179b81.png" width=80% height=40%>
 
 ### 4. Forecasts with Prophet model
 
-<img src="https://user-images.githubusercontent.com/95805829/166657110-0670a864-f47c-44c0-9b02-1b67be735047.png" width=50% height=50%>
+The first forecast is done without hyperparameters indicated:
 
-After hyperparameters tuning, we get an improvement
+<img src="https://user-images.githubusercontent.com/95805829/166658065-54349f7e-93f8-4afe-864b-ee76f3fcf498.png" width=80% height=40%>
 
-<img src="https://user-images.githubusercontent.com/95805829/166657110-0670a864-f47c-44c0-9b02-1b67be735047.png" width=50% height=50%>
+We get an improvement of reducing `RMSE` error after hyperparameters tuning:
 
+<img src="https://user-images.githubusercontent.com/95805829/166658078-2e36b91c-c822-424a-8af9-5667811ad6ce.png" width=80% height=40%>
+
+The `RMSE` error drops from 178302.105 to 150059.697.
