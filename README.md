@@ -35,8 +35,29 @@ With Prophet model, a cross-validation is implemented, and later used in hyperpa
 
 ## Results
 
+### 1. The seasonality can be somewhat suggested by seasonal plot
+
 ![](Pictures/seasonal_plot.png?raw=true)
-
-I also explore the distribution with the box plots:
-
+and the box plots:
 ![](Pictures/box_plot.png?raw=true)
+
+### 2. Decomposition
+
+![](Pictures/decomposition.png?raw=true)
+
+### 3. Forecasts with SARIMA model
+
+![](Pictures/SARIMA_1.png?raw=true)
+
+On another training set containing info of outliers, the result is better
+
+![](Pictures/SARIMA_2.png?raw=true)
+
+### 4. Forecasts with Prophet model
+
+![](Pictures/Prophet_1.png?raw=true)
+
+After hyperparameters tuning, we get an improvement
+
+![](Pictures/Prophet_2.png?raw=true)
+
